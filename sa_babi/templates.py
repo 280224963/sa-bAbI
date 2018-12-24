@@ -54,6 +54,19 @@ COND_MAIN_LINES = [
     "$idx_var = $false_idx;",
     "}"
 ]
+INT_FLOW_INIT_PAIRS = [
+    ("char $buf_var[$buf_len];", None),
+    ("int $idx_var;", "$idx_var = $idx_init;"),
+    ("int $thresh_var;", "$thresh_var = $thresh;")
+    ("int $result_var;", "$result_var = $result;")
+]
+INT_FLOW_LINES = [
+    "if($idx_var < $thresh_var){",
+    "$result_var = $thresh_var+$idx_var;",
+    "} else {",
+    "$result_var = $thresh_var-$idx_var;",
+    "}"
+]
 
 WHILE_DEC_INIT_PAIRS = [
     ("char $buf_var[$buf_len];", None),
